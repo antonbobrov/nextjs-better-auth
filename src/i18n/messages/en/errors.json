@@ -1,0 +1,54 @@
+{
+  "unsuspend": {
+    "invalidToken": "This unsuspend link is invalid or has already been used."
+  },
+  "unableToLoad": "Unable to load data",
+  "forbidden": "You don't have permission to do this.",
+  "noResults": "No results found",
+  "internal": "Internal error",
+  "email": {
+    "invalid": "Please enter a valid email.",
+    "required": "Please enter your email."
+  },
+  "expiration": {
+    "future": "Expiration must be in the future."
+  },
+  "name": {
+    "max": "Name must be at most {max} characters long.",
+    "required": "Please enter your name."
+  },
+  "authenticatorCode": {
+    "format": "Enter the {count}-digit code from your authenticator app.",
+    "required": "Please enter the authenticator code."
+  },
+  "backupCode": {
+    "invalid": "Invalid backup code.",
+    "max": "Backup code must be at most {max} characters long.",
+    "required": "Please enter a backup code."
+  },
+  "confirmPassword": {
+    "mismatch": "Passwords don't match.",
+    "required": "Please confirm your password."
+  },
+  "currentPassword": {
+    "required": "Please enter your current password."
+  },
+  "password": {
+    "max": "Password must be at most {max} characters long.",
+    "min": "Password must be at least {min} characters long.",
+    "required": "Please enter your password.",
+    "incorrect": "Incorrect password."
+  },
+  "reason": {
+    "max": "Reason must be at most {max} characters long.",
+    "required": "Please enter a reason."
+  },
+  "invalidFormat": "Invalid format",
+  "noInternet": "No internet connection",
+  "rateLimited": "Too many requests. Try again later.",
+  "rateLimitedWithTime": "Too many requests. Try again in {retryIn}s.",
+  "unauthorized": "Unauthorized",
+  "unexpected": "Unexpected error",
+  "invalidResponse": "Invalid response",
+  "notFound": "Nothing found"
+}

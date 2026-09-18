@@ -1,0 +1,79 @@
+{
+  "banned": "Banned",
+  "banExpires": "Ban Expires",
+  "banReason": "Ban reason",
+  "delete": {
+    "body": "Your account will be deleted permanently. This cannot be undone.",
+    "description": "Permanently remove your account and all associated data. This cannot be undone.",
+    "header": "Delete your account?",
+    "title": "Delete account"
+  },
+  "detailsHeading": "Registration and activity details",
+  "disabled": "Disabled",
+  "enabled": "Enabled",
+  "profileUpdated": "Profile updated",
+  "registered": "Registered",
+  "selfSuspended": "Self-suspended",
+  "signOut": {
+    "body": "You will need to sign in again to access your account.",
+    "header": "Sign out?"
+  },
+  "status": "Status",
+  "stopImpersonating": {
+    "body": "You will return to your admin account.",
+    "confirm": "Stop",
+    "header": "Stop impersonating?"
+  },
+  "suspend": {
+    "body": "If your account is compromised, this blocks all sign-in. You can unsuspend it later with a link sent to your email.",
+    "description": "Lock the account if it may be compromised, so nobody can sign in. Unsuspend it yourself later with a link sent to your email.",
+    "header": "Suspend your account?",
+    "title": "Suspend account"
+  },
+  "success": {
+    "otherSessionsRevoked": "Other sessions are revoked",
+    "passwordUpdated": "Password updated",
+    "sessionRevoked": "The session is revoked"
+  },
+  "unverified": "Unverified",
+  "updatePassword": {
+    "revokeOtherHint": "Sign out of all other devices after changing your password"
+  },
+  "verified": "Verified",
+  "twoFactor": {
+    "backupCodes": "Backup codes",
+    "backupCodesGenerated": "New backup codes generated",
+    "disable": "Disable two-factor",
+    "disableBody": "You will only need your password to sign in after this. You can enable two-factor authentication again later.",
+    "disableHeader": "Disable two-factor authentication?",
+    "disabled": "Two-factor authentication disabled",
+    "enabled": "Two-factor authentication enabled",
+    "enabledDescription": "Two-factor authentication is on. Sign-in requires a code from your authenticator app or a backup code.",
+    "enableSubmit": "Enable two-factor",
+    "generateHint": "Generate a new set of backup codes. Previous unused codes will stop working.",
+    "generateSubmit": "Generate new codes",
+    "qrTitle": "Authenticator QR code",
+    "saveCodesHint": "Save these codes in a safe place. Each code can be used once if you lose access to your authenticator app.",
+    "scanHint": "Use Google Authenticator, Authy, or another TOTP app. If you cannot scan the code, enter the secret manually.",
+    "scanTitle": "Scan with your authenticator app",
+    "setupHint": "Confirm your password to start setup. Then scan the QR code with an authenticator app and enter a code to turn two-factor authentication on.",
+    "title": "Authenticator app",
+    "unableToGenerate": "Unable to generate backup codes.",
+    "unableToStart": "Unable to start two-factor setup."
+  },
+  "session": {
+    "current": "Current",
+    "unknownBrowser": "Unknown browser",
+    "unknownDevice": "Unknown device",
+    "unknownIp": "Unknown IP"
+  },
+  "sessions": {
+    "heading": "Devices signed in to your account",
+    "revokeOther": "Revoke other sessions",
+    "revokeOtherBody": "Other devices will be signed out. You will stay signed in on this device.",
+    "revokeOtherHeader": "Revoke other sessions?",
+    "revokeSession": "Revoke session",
+    "revokeSessionBody": "This device will be signed out.",
+    "revokeSessionHeader": "Revoke this session?"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "all": "All",
+  "filters": "Filters",
+  "never": "Never",
+  "no": "No",
+  "unknown": "Unknown",
+  "yes": "Yes",
+  "actions": {
+    "cancel": "Cancel",
+    "clear": "Clear",
+    "confirm": "Confirm",
+    "continue": "Continue",
+    "delete": "Delete",
+    "goBack": "Go Back",
+    "hidePassword": "Hide password",
+    "refresh": "Refresh",
+    "revoke": "Revoke",
+    "save": "Save",
+    "show": "Show",
+    "showPassword": "Show password"
+  },
+  "copy": {
+    "action": "Copy {label}",
+    "failed": "Failed to copy {label}",
+    "success": "{label} copied"
+  },
+  "fields": {
+    "authenticatorCode": {
+      "label": "Authenticator code"
+    },
+    "backupCode": {
+      "label": "Backup code",
+      "placeholder": "Enter a backup code"
+    },
+    "confirmPassword": {
+      "label": "Confirm password"
+    },
+    "currentPassword": {
+      "label": "Current password"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "name@example.com"
+    },
+    "expiration": {
+      "label": "Expiration"
+    },
+    "id": {
+      "label": "Id"
+    },
+    "name": {
+      "label": "Name",
+      "placeholder": "John Doe"
+    },
+    "newPassword": {
+      "label": "New password"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "********"
+    },
+    "reason": {
+      "label": "Reason",
+      "placeholder": "Spamming"
+    },
+    "role": {
+      "label": "Role"
+    },
+    "search": {
+      "label": "Search"
+    },
+    "secret": {
+      "label": "Secret"
+    }
+  }
+}

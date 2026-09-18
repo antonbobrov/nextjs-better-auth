@@ -1,0 +1,81 @@
+{
+  "usersStats": {
+    "activeSessions": "Active sessions",
+    "banned": "Banned",
+    "newUsersDay": "New today",
+    "newUsersMonth": "New this month",
+    "newUsersWeek": "New this week",
+    "selfSuspended": "Self-suspended",
+    "twoFactor": "Two-factor",
+    "users": "Users",
+    "verified": "Verified"
+  },
+  "list": {
+    "actions": "Actions",
+    "createdWithin": "Period",
+    "createdWithinDay": "Last day",
+    "createdWithinMonth": "Last month",
+    "createdWithinWeek": "Last week",
+    "newest": "Newest",
+    "oldest": "Oldest",
+    "perPage": "Per page",
+    "resetFilters": "Reset filters",
+    "searchPlaceholder": "Id, email or name",
+    "suspended": "Suspended"
+  },
+  "create": {
+    "description": "The account will be verified and can sign in with this email and password.",
+    "title": "Create user"
+  },
+  "details": {
+    "description": "Registration, role and account status.",
+    "title": "User details"
+  },
+  "role": {
+    "description": "Grant admin access or set this account back to a regular user.",
+    "submit": "Save role",
+    "title": "Change role",
+    "success": "Role updated"
+  },
+  "password": {
+    "description": "Set a new password for this user.",
+    "submit": "Save password",
+    "title": "Change password"
+  },
+  "sessions": {
+    "description": "Devices currently signed in to this account.",
+    "revokeAll": "Revoke all sessions",
+    "revokeAllBody": "All devices for this user will be signed out.",
+    "revokeAllHeader": "Revoke all sessions?",
+    "success": {
+      "allRevoked": "All sessions are revoked"
+    }
+  },
+  "impersonate": {
+    "body": "You will see the app as <email></email>. You can stop impersonating anytime.",
+    "description": "Open the app as this user. You can stop impersonating anytime.",
+    "header": "Impersonate this user?",
+    "title": "Impersonate"
+  },
+  "danger": {
+    "description": "Ban this user or delete the account permanently.",
+    "title": "Danger zone",
+    "ban": {
+      "body": "User <email></email> will be banned and will not be able to sign in.",
+      "header": "Ban this user?",
+      "submit": "Ban",
+      "success": "User banned"
+    },
+    "delete": {
+      "body": "User <email></email> will be deleted permanently. This cannot be undone.",
+      "header": "Delete this user?",
+      "success": "User deleted"
+    },
+    "unban": {
+      "body": "User <email></email> will be able to sign in again.",
+      "header": "Unban this user?",
+      "submit": "Unban",
+      "success": "User unbanned"
+    }
+  }
+}

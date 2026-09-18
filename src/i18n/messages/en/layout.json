@@ -1,0 +1,30 @@
+{
+  "menu": {
+    "addUser": "Add user",
+    "admin": "Admin",
+    "danger": "Danger",
+    "details": "Details",
+    "edit": "Edit",
+    "password": "Password",
+    "sessions": "Sessions",
+    "account": "Account",
+    "signOut": "Sign out",
+    "home": "Home",
+    "stopImpersonating": "Stop impersonating",
+    "twoFactor": "Two-factor",
+    "users": "Users list",
+    "usersStats": "Users stats"
+  },
+  "nav": {
+    "account": "Account",
+    "accountDetails": "Account details",
+    "closeMenu": "Close menu",
+    "collapseSidebar": "Collapse",
+    "expandSidebar": "Expand",
+    "language": "Language",
+    "menu": "Menu",
+    "navigation": "Navigation",
+    "openMenu": "Open menu",
+    "sidebar": "Sidebar"
+  }
+}
