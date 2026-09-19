@@ -2,7 +2,6 @@ import { createContext } from 'react';
 
 import type { TSessionProviderContext } from './types';
 
-export const SessionProviderContext = createContext<TSessionProviderContext>({
-  session: null,
-  user: null,
-});
+export const SessionProviderContext = createContext<TSessionProviderContext>(
+  null as never as TSessionProviderContext,
+);

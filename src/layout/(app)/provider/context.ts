@@ -8,4 +8,6 @@ export type TLayoutContext = {
   setIsSidebarExpanded: (isExpanded: boolean) => void;
 };
 
-export const LayoutContext = createContext({} as TLayoutContext);
+export const LayoutContext = createContext<TLayoutContext>(
+  null as never as TLayoutContext,
+);
