@@ -13,7 +13,7 @@ import type {
   TCreatedWithin,
   TSortDirection,
 } from '@/features/(admin)/users/users/types';
-import { useEvent, useRouteSearchParams } from '@/hooks';
+import { useEvent, useSearchParamsState } from '@/hooks';
 import { ROUTES } from '@/shared/config/routes';
 import type { TUserRole } from '@/shared/config/user';
 import { useSession } from '@/shared/providers/session/hooks';
@@ -30,7 +30,7 @@ export const AdminUsersList: FC = () => {
   const t = useTranslations('admin.list');
   const { user: currentUser } = useSession();
 
-  const { defaults, params, patchParams, setParams } = useRouteSearchParams(
+  const { defaults, params, patchParams, setParams } = useSearchParamsState(
     listAdminUsersParamsSchema,
     ROUTES.admin.users.list,
   );

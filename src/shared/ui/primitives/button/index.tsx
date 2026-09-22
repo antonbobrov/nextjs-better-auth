@@ -20,7 +20,11 @@ const Component: FC<IProps> = ({
   >
     {({ isPending }) => (
       <>
-        {isPending ? <Spinner size="sm" color="current" /> : Icon && <Icon />}
+        {isPending ? (
+          <Spinner size="sm" data-testid="spinner" color="current" />
+        ) : (
+          Icon && <Icon />
+        )}
 
         {children}
       </>

@@ -44,12 +44,18 @@ const Component: FC<IProps> = ({
 
   const debouncedChangeValue = useDebouncedProp(changeValue, debounceMs);
   const handleSearchChange = useEvent(onSearchChange);
+  const prevDebouncedChangeValue = useRef(debouncedChangeValue);
 
   useEffect(() => {
     if (isSubmit) {
       return;
     }
 
+    if (prevDebouncedChangeValue.current === debouncedChangeValue) {
+      return;
+    }
+
+    prevDebouncedChangeValue.current = debouncedChangeValue;
     handleSearchChange(debouncedChangeValue);
   }, [debouncedChangeValue, handleSearchChange, isSubmit]);
 
@@ -110,6 +116,7 @@ const Component: FC<IProps> = ({
                 size="sm"
                 type="button"
                 aria-label={tActions('clear')}
+                data-testid="clear-button"
                 isIconOnly
                 variant="ghost"
                 onPress={clear}
@@ -122,6 +129,7 @@ const Component: FC<IProps> = ({
               size="sm"
               type="button"
               aria-label={tFields('search.label')}
+              data-testid="search-button"
               isIconOnly
               variant="ghost"
               onPress={commit}

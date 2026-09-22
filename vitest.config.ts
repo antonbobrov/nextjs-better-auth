@@ -7,6 +7,14 @@ export default defineConfig({
       provider: 'v8',
       reporter: ['text', 'html'],
     },
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: ['./vitest.setup.ts'],
   },
   plugins: [tsconfigPaths()],
+  resolve: {
+    alias: {
+      'next/navigation': 'next/navigation.js',
+    },
+  },
 });

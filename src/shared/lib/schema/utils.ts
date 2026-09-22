@@ -40,9 +40,5 @@ export function parseZodErrorMessage({
     ? translations?.(code as never, params as never)
     : translations?.(code as never);
 
-  if (translatedCode !== code) {
-    return translatedCode;
-  }
-
-  return message;
+  return translatedCode;
 }

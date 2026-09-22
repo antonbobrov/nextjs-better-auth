@@ -4,33 +4,15 @@ import { useMemo, useRef } from 'react';
 
 import { useSearchParams } from 'next/navigation';
 
-import { useEvent } from '@/hooks';
 import { usePathname, useRouter } from '@/i18n/navigation';
+
+import { omitDefaultSearchParams } from '../utils/data';
+
+import { useEvent } from './useEvent';
 
 import type z from 'zod';
 
-function serializeParams<T extends Record<string, unknown>>(
-  params: T,
-  defaults: T,
-) {
-  const searchParams = new URLSearchParams();
-
-  for (const [key, value] of Object.entries(params)) {
-    if (value === null || value === undefined || value === '') {
-      continue;
-    }
-
-    if (Object.is(value, defaults[key])) {
-      continue;
-    }
-
-    searchParams.set(key, String(value));
-  }
-
-  return searchParams;
-}
-
-export function useRouteSearchParams<
+export function useSearchParamsState<
   TSchema extends z.ZodObject<z.ZodRawShape>,
 >(schema: TSchema, pathname?: string) {
   const router = useRouter();
@@ -56,17 +38,19 @@ export function useRouteSearchParams<
   }, [defaults, searchParams]);
 
   const setParams = useEvent((next: z.infer<TSchema>) => {
-    const query = serializeParams(next, defaults).toString();
+    const query = omitDefaultSearchParams(next, defaults).toString();
 
     router.push(query ? `${path}?${query}` : path);
+
+    return query;
   });
 
-  const patchParams = useEvent((patch: Partial<z.infer<TSchema>>) => {
+  const patchParams = useEvent((patch: Partial<z.infer<TSchema>>) =>
     setParams({
       ...params,
       ...patch,
-    });
-  });
+    }),
+  );
 
   return {
     defaults,

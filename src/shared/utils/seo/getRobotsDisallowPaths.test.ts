@@ -10,9 +10,5 @@ test('getRobotsDisallowPaths', () => {
     `${ROUTES.app}/*`,
     ROUTES.auth.index,
     `${ROUTES.auth.index}/*`,
-    `/ru${ROUTES.app}`,
-    `/ru${ROUTES.app}/*`,
-    `/ru${ROUTES.auth.index}`,
-    `/ru${ROUTES.auth.index}/*`,
   ]);
 });

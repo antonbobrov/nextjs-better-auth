@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run lint && npx drizzle-kit migrate && next build",
+    "build": "npm run lint && npm run test:run && npx drizzle-kit migrate && next build",
     "start": "next start",
     "lint": "npm run lint:messages && npm run lint:js && npm run lint:style",
     "lint:messages": "npx eloqnt lint",
@@ -16,8 +16,9 @@
     "check-types": "tsc --noEmit",
     "drizzle:generate": "npx drizzle-kit generate",
     "drizzle:migrate": "npx drizzle-kit migrate",
-    "test": "vitest",
-    "test:coverage": "vitest --coverage",
+    "test:dev": "vitest",
+    "test:run": "cross-env NODE_ENV=test vitest run",
+    "test:coverage": "cross-env NODE_ENV=test vitest run --coverage",
     "email:dev": "email dev --dir src/shared/lib/email/templates --port 3001"
   },
   "dependencies": {
@@ -61,6 +62,9 @@
   "devDependencies": {
     "@eloqnt/cli": "^0.6.29",
     "@react-email/ui": "^6.9.5",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
     "@types/debug": "^4.1.13",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
@@ -84,6 +88,7 @@
     "eslint-plugin-react-perf": "3.3.3",
     "eslint-plugin-sonarjs": "4.0.3",
     "globals": "17.5.0",
+    "jsdom": "^29.1.1",
     "knip": "6.32.2",
     "prettier": "3.8.3",
     "sass": "1.99.0",

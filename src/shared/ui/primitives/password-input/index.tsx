@@ -26,6 +26,7 @@ export const PasswordInput: FC<TProps> = (props) => {
           size="sm"
           type="button"
           aria-label={isVisible ? t('hidePassword') : t('showPassword')}
+          data-testid="toggle-password"
           isIconOnly
           variant="ghost"
           onPress={toggleVisibility}

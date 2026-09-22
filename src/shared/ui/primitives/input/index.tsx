@@ -38,6 +38,7 @@ export const Input: FC<IInputProps> = ({
         {...props}
         ref={inputRef}
         className="w-full"
+        data-testid="input"
         onKeyDown={handleKeyDown}
       />
 

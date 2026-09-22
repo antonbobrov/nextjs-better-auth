@@ -1,11 +1,11 @@
 import type { IComponent } from '@/types/Component';
 
-interface IOption {
+export interface IOption {
   id: string;
   label: string;
 }
 
-export interface IProps extends IComponent {
+export interface ISelectProps extends IComponent {
   'aria-label'?: string;
   fullWidth?: boolean;
   isDisabled?: boolean;

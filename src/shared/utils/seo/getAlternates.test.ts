@@ -10,7 +10,6 @@ test('getAlternates', () => {
     canonical: ROUTES.home,
     languages: {
       en: ROUTES.home,
-      ru: '/ru',
       'x-default': ROUTES.home,
     },
   });
@@ -19,7 +18,6 @@ test('getAlternates', () => {
     canonical: ROUTES.auth.signIn(),
     languages: {
       en: ROUTES.auth.signIn(),
-      ru: `/ru${ROUTES.auth.signIn()}`,
       'x-default': ROUTES.auth.signIn(),
     },
   });
@@ -28,7 +26,6 @@ test('getAlternates', () => {
     canonical: '/',
     languages: {
       en: '/',
-      ru: '/ru',
       'x-default': '/',
     },
   });

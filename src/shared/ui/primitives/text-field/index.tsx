@@ -51,6 +51,7 @@ const Component: FC<TTextFieldProps> = ({
         size="sm"
         type="button"
         aria-label={t('clear')}
+        data-testid="clear-button"
         isIconOnly
         variant="ghost"
         onPress={handleClear}
@@ -73,7 +74,7 @@ const Component: FC<TTextFieldProps> = ({
       onChange={onChange}
     >
       <div className="flex justify-between">
-        <Label>{label}</Label>
+        <Label data-testid="label">{label}</Label>
 
         {right && <p className="label text-muted">{right}</p>}
       </div>
@@ -96,7 +97,9 @@ const Component: FC<TTextFieldProps> = ({
       )}
 
       {errorMessage ? (
-        <FieldError className="p-0">{errorMessage}</FieldError>
+        <FieldError className="p-0" data-testid="error">
+          {errorMessage}
+        </FieldError>
       ) : null}
     </HeroUiTextField>
   );

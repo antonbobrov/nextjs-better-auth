@@ -18,9 +18,8 @@ export function useEventListener<
   target: Target,
   listenerProp: Listener,
   options?: AddEventListenerOptions,
-  { getIsDisabled: getIsDisabledProp, isDisabled }: IOptions = {},
+  { getIsDisabled, isDisabled }: IOptions = {},
 ) {
-  const getIsDisabled = useEvent(getIsDisabledProp);
   const listener = useEvent(listenerProp);
 
   useEffect(() => {

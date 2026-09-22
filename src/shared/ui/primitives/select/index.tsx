@@ -7,9 +7,11 @@ import { Label, ListBox, Select as HeroUiSelect } from '@heroui/react';
 import { useEvent } from '@/hooks';
 import { cn } from '@/utils';
 
-import type { IProps } from './types';
+import { toSelectValue } from './toSelectValue';
 
-const Component: FC<IProps> = ({
+import type { ISelectProps } from './types';
+
+const Component: FC<ISelectProps> = ({
   className,
   style,
   'aria-label': ariaLabel,
@@ -21,11 +23,13 @@ const Component: FC<IProps> = ({
   onChange,
 }) => {
   const handleChange = useEvent((next: Key | Key[] | null) => {
-    if (next == null || Array.isArray(next)) {
+    const nextValue = toSelectValue(next);
+
+    if (nextValue == null) {
       return;
     }
 
-    onChange(String(next));
+    onChange(nextValue);
   });
 
   return (
@@ -38,7 +42,11 @@ const Component: FC<IProps> = ({
       value={value}
       onChange={handleChange}
     >
-      {label && <Label className="truncate">{label}</Label>}
+      {label && (
+        <Label className="truncate" data-testid="label">
+          {label}
+        </Label>
+      )}
 
       <HeroUiSelect.Trigger>
         <HeroUiSelect.Value className="truncate" />
