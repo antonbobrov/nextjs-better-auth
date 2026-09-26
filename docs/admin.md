@@ -17,13 +17,13 @@ Locale prefix `[locale]` is omitted below.
 
 ## Config
 
-| Piece | Location | Notes |
-| --- | --- | --- |
-| Plugin | `admin()` | Defaults only |
-| Roles | `USER_ROLES` | `admin`, `user` |
-| Gate helper | `isAdminRole` | `role === 'admin'` |
-| Schema | `src/db/schema.ts` | `role`, `banned`, `banReason`, `banExpires`; `session.impersonatedBy` |
-| Routes | `ROUTES.admin.*` | `src/shared/config/routes.ts` |
+| Piece       | Location           | Notes                                                                 |
+| ----------- | ------------------ | --------------------------------------------------------------------- |
+| Plugin      | `admin()`          | Defaults only                                                         |
+| Roles       | `USER_ROLES`       | `admin`, `user`                                                       |
+| Gate helper | `isAdminRole`      | `role === 'admin'`                                                    |
+| Schema      | `src/db/schema.ts` | `role`, `banned`, `banReason`, `banExpires`; `session.impersonatedBy` |
+| Routes      | `ROUTES.admin.*`   | `src/shared/config/routes.ts`                                         |
 
 Access layers:
 
@@ -34,14 +34,14 @@ Access layers:
 
 ## Pages
 
-| Path | Purpose |
-| --- | --- |
-| `/app/admin` | Redirect → stats |
-| `/app/admin/users` | Redirect → stats |
-| `/app/admin/users/stats` | Aggregates (users, verified, banned, 2FA, sessions, …) |
-| `/app/admin/users/list` | Filterable / paginated table |
-| `/app/admin/users/list/[id]` | User detail + actions |
-| `/app/admin/users/new` | Create user |
+| Path                         | Purpose                                                |
+| ---------------------------- | ------------------------------------------------------ |
+| `/app/admin`                 | Redirect → stats                                       |
+| `/app/admin/users`           | Redirect → stats                                       |
+| `/app/admin/users/stats`     | Aggregates (users, verified, banned, 2FA, sessions, …) |
+| `/app/admin/users/list`      | Filterable / paginated table                           |
+| `/app/admin/users/list/[id]` | User detail + actions                                  |
+| `/app/admin/users/new`       | Create user                                            |
 
 Nav: Stats, Users list, Add user — `src/layout/(app)/admin/nav/`.  
 Features: `src/features/(admin)/users/`. Views: `src/views/(admin)/users/`.
@@ -50,10 +50,10 @@ Features: `src/features/(admin)/users/`. Views: `src/views/(admin)/users/`.
 
 ### Custom (Drizzle)
 
-| Path | Guard | Purpose |
-| --- | --- | --- |
-| `GET /api/admin/users` | `withAdmin` | Search, filters, sort, pagination |
-| `GET /api/admin/users/stats` | `withAdmin` | Dashboard counts |
+| Path                         | Guard       | Purpose                           |
+| ---------------------------- | ----------- | --------------------------------- |
+| `GET /api/admin/users`       | `withAdmin` | Search, filters, sort, pagination |
+| `GET /api/admin/users/stats` | `withAdmin` | Dashboard counts                  |
 
 List filters include role, verified, banned, selfSuspended, twoFactor, createdWithin, etc.
 

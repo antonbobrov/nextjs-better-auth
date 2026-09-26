@@ -19,15 +19,15 @@ Locale prefix `[locale]` is omitted below (default: `en`).
 
 From `src/shared/config/auth.ts` (current defaults):
 
-| Constant | Values | Meaning |
-| --- | --- | --- |
-| `SESSION` | `expiresIn` 7d, `updateAge` 15m | Session TTL and sliding refresh |
-| `RATE_LIMIT` | `max` 100 / `window` 10s | Better Auth DB rate limit |
-| `SIGN_UP` | enabled, autoSignIn, requireVerification, resendVerification — all `true` | Signup gate and verify behavior |
-| `EMAIL_VERIFICATION` | `autoSignIn` false, `expiresIn` 1h | Post-verify login; token TTL |
-| `RESET_PASSWORD` | `expiresIn` 1h | Reset token TTL |
-| `TWO_FACTOR` | `digits` 6, `enabled` true | TOTP length; feature flag |
-| `SELF_SUSPEND` | prefixes + `expiresIn` 1h | Unsuspend token store keys / TTL |
+| Constant             | Values                                                                    | Meaning                          |
+| -------------------- | ------------------------------------------------------------------------- | -------------------------------- |
+| `SESSION`            | `expiresIn` 7d, `updateAge` 15m                                           | Session TTL and sliding refresh  |
+| `RATE_LIMIT`         | `max` 100 / `window` 10s                                                  | Better Auth DB rate limit        |
+| `SIGN_UP`            | enabled, autoSignIn, requireVerification, resendVerification — all `true` | Signup gate and verify behavior  |
+| `EMAIL_VERIFICATION` | `autoSignIn` false, `expiresIn` 1h                                        | Post-verify login; token TTL     |
+| `RESET_PASSWORD`     | `expiresIn` 1h                                                            | Reset token TTL                  |
+| `TWO_FACTOR`         | `digits` 6, `enabled` true                                                | TOTP length; feature flag        |
+| `SELF_SUSPEND`       | prefixes + `expiresIn` 1h                                                 | Unsuspend token store keys / TTL |
 
 Related: `PASSWORD_MIN_LENGTH = 7` in `src/shared/config/user.ts`. Routes: `ROUTES.auth.*` in `src/shared/config/routes.ts`.
 
@@ -35,17 +35,17 @@ Server also enables `user.deleteUser`, session `freshAge: 0`, and sign-in / pass
 
 ## Pages
 
-| Path | Purpose |
-| --- | --- |
-| `/auth` | Redirect → sign-in |
-| `/auth/sign-in` | Email/password; `?email=`, `?error=` |
-| `/auth/sign-up` | Create account (`404` if signup disabled) |
-| `/auth/send-verify-email` | Resend verification |
-| `/auth/verify-email` | Confirm `?token=` |
-| `/auth/forgot-password` | Request reset |
-| `/auth/reset-password` | Set new password (`?token=`) |
-| `/auth/two-factor` | TOTP / backup code after password |
-| `/auth/self-unsuspend` | Request (`?email=`) or confirm (`?token=`) |
+| Path                      | Purpose                                    |
+| ------------------------- | ------------------------------------------ |
+| `/auth`                   | Redirect → sign-in                         |
+| `/auth/sign-in`           | Email/password; `?email=`, `?error=`       |
+| `/auth/sign-up`           | Create account (`404` if signup disabled)  |
+| `/auth/send-verify-email` | Resend verification                        |
+| `/auth/verify-email`      | Confirm `?token=`                          |
+| `/auth/forgot-password`   | Request reset                              |
+| `/auth/reset-password`    | Set new password (`?token=`)               |
+| `/auth/two-factor`        | TOTP / backup code after password          |
+| `/auth/self-unsuspend`    | Request (`?email=`) or confirm (`?token=`) |
 
 Authenticated 2FA setup: `/app/account/two-factor` (`404` if `!TWO_FACTOR.enabled`).
 
@@ -109,10 +109,10 @@ Forms live in `src/features/(auth)/`, page shells in `src/views/(auth)/`.
 
 ## Emails
 
-| Email | Trigger |
-| --- | --- |
-| Confirm / verify | Signup & resend verification |
-| Reset password | Forgot-password request |
-| Sign-in notification | Session created (not impersonation) |
-| Password changed | Reset complete or `/change-password` (not when impersonating) |
-| Self-unsuspend | Unsuspend request API |
+| Email                | Trigger                                                       |
+| -------------------- | ------------------------------------------------------------- |
+| Confirm / verify     | Signup & resend verification                                  |
+| Reset password       | Forgot-password request                                       |
+| Sign-in notification | Session created (not impersonation)                           |
+| Password changed     | Reset complete or `/change-password` (not when impersonating) |
+| Self-unsuspend       | Unsuspend request API                                         |
